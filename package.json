@@ -1,7 +1,7 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "leaderboard",
   "version": "1.0.0",
-  "description": "This is a simple yet powerful webpack boilerplate, which we can later use as a starting point in our projects.",
+  "description": "this is a simple game.",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
