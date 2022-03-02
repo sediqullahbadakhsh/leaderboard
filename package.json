@@ -4,6 +4,7 @@
   "description": "This is a simple yet powerful webpack boilerplate, which we can later use as a starting point in our projects.",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
@@ -20,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/sediqullahbadakhsh/todo-list.git/leaderboard/issues"
   },
-  "homepage": "",
+  "homepage": "https://sediqullahbadakhsh.github.io/leaderboard/",
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
     "babel-eslint": "^10.1.0",
