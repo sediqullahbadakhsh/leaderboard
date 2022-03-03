@@ -2,23 +2,27 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #004600;
 }
 
 body {
-  width: 70%;
   margin: auto;
-  background-image: repeating-linear-gradient(#999, #888, #999, #888);
+  background-color: #71cad0;
+  overflow-x: hidden;
 }
 
 h1 {
   text-align: center;
   margin: 20px 0 40px;
   font-size: 4em;
+  width: 100vw;
+  border-bottom: solid 3px #004600;
+  text-shadow: 2px 2px 10px #004600;
 }
 
 h2 {
   font-size: 1.95em;
+  text-shadow: 2px 2px 10px #004600;
 }
 
 .leader-container {
@@ -31,39 +35,77 @@ h2 {
 .list-header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .scores {
-  border: solid 2px #000;
-  background-color: #fff;
+  border: none;
+  background-color: #4ec390;
+  box-shadow: -5px -5px 15px #39b093, 5px 5px 15px #39b093;
   border-radius: 10px;
   height: 350px;
   width: 350px;
   padding: 10px;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #009578;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6dcdb1;
+}
+
+.list-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+#one {
+  padding: 3px 10px;
 }
 
 li {
-  font-size: 18px;
-}
-
-li:nth-child(even) {
-  background-color: #999;
+  font-size: 20px;
+  list-style-type: none;
+  border-radius: 10px;
+  margin: 2px;
+  background-color: #71cad0;
 }
 
 .btn {
-  width: 80px;
+  width: 100px;
   height: 30px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 10px;
+  font-weight: 900;
+  border: none;
+  box-shadow: -5px -5px 15px #39b093, 5px 5px 15px #39b093;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #004600;
 }
 
 form {
-  border-radius: 0.6rem;
-  background-size: cover;
-  border: solid 2px #000;
-  background-color: #fff;
+  background-color: #4ec390;
+  box-shadow: -5px -5px 15px #39b093, 5px 5px 15px #39b093;
+  border-radius: 10px;
   height: 200px;
   width: 280px;
   padding-top: 20px;
@@ -74,16 +116,19 @@ form {
 }
 
 .add-score h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .inpute-box {
   padding-left: 5px;
   height: 30px;
-  border-radius: 0.25rem;
+  border-radius: 10px;
+  border: none;
   border-color: #020f43;
   outline: none;
   background-color: white;
+  box-shadow: -5px -5px 15px #39b093, 5px 5px 15px #39b093;
 }
 
 @media screen and (max-width: 930px) {
