@@ -9,7 +9,7 @@ const addToLeaderboard = (data) => {
   }
   api.setData(data.user, data.score).then((recieved) => {
     formtxt.innerHTML = recieved.result;
-    formtxt.style.color = 'green';
+    formtxt.style.color = '#fff';
   });
 };
 
@@ -23,7 +23,7 @@ const displayLeaderboard = () => {
     const arrangedList = dataList.result.sort((a, b) => b.score - a.score);
     arrangedList.forEach((data) => {
       const li = document.createElement('li');
-      li.innerHTML = `${data.user}:  ${data.score}`;
+      li.innerHTML = `<div class ="list-items"> <p id="one">${data.user}:</p><p id="two">  ${data.score}</p>`;
       scoreListSection.appendChild(li);
     });
   });
