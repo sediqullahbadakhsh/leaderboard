@@ -9,12 +9,12 @@ body {
   width: 70%;
   margin: auto;
   background-image: repeating-linear-gradient(#999, #888, #999, #888);
-  background-size: cover;
 }
 
 h1 {
+  text-align: center;
   margin: 20px 0 40px;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 h2 {
@@ -23,46 +23,43 @@ h2 {
 
 .leader-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 100px;
   margin-bottom: 20px;
-  padding: 50px 0;
 }
 
-.list-scores {
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.scores {
   border: solid 2px #000;
   background-color: #fff;
   border-radius: 10px;
   height: 350px;
   width: 350px;
-  padding-top: 20px;
+  padding: 10px;
+  overflow: scroll;
 }
 
-.even {
-  color: #000;
-  font-size: 20px;
+li {
+  font-size: 18px;
 }
 
-.even:nth-child(even) {
+li:nth-child(even) {
   background-color: #999;
 }
 
-.recent-scores h2 {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.list-item {
-  list-style-type: none;
-  padding: 3px 5px;
+.btn {
+  width: 80px;
   height: 30px;
-  border-radius: 1rem;
-  border: 1px solid #020f43;
-  background-color: white;
-  margin: 20px 30px;
-  background-image: linear-gradient(#603bf1, #7f0e96);
+  font-size: 16px;
+  border-radius: 3px;
 }
 
-.form {
+form {
   border-radius: 0.6rem;
   background-size: cover;
   border: solid 2px #000;
@@ -77,11 +74,10 @@ h2 {
 }
 
 .add-score h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.name,
-.score {
+.inpute-box {
   padding-left: 5px;
   height: 30px;
   border-radius: 0.25rem;
@@ -90,24 +86,8 @@ h2 {
   background-color: white;
 }
 
-.submit,
-.refresh {
-  padding: 3px 12px;
-  border-width: 3px;
-  color: #000;
-  font-size: larger;
-  border-radius: 0.3rem;
-}
-
-.submit:hover,
-.refresh:hover {
-  background-image: linear-gradient(rgb(52, 56, 255), #100069);
-  color: #fff;
-}
-
 @media screen and (max-width: 930px) {
   .leader-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;

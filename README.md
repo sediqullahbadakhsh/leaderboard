@@ -5,6 +5,11 @@
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score.
 
 Below you can see how this website should look and behave:
+![screenshot](./screenshot.jpg)
+
+## Live Demo
+
+[Live Demo](https://sediqullahbadakhsh.github.io/leaderboard/)
 
 ## Setup
 
