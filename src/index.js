@@ -1,11 +1,25 @@
 import './style.css';
-import ScoreList from './app.js';
+import * as util from './modules/app.js';
 
-const leaderboard = new ScoreList();
+const name = document.getElementById('name');
+const score = document.getElementById('score');
+const submit = document.getElementById('submit');
+const refresh = document.getElementById('refresh');
 
-window.onload = () => {
-  document.getElementById('submit').addEventListener('click', (e) => {
-    e.preventDefault();
-    leaderboard.addScore();
-  });
-};
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  util.addToLeaderboard({ user: name.value, score: score.value });
+  score.value = '';
+  name.value = '';
+  setTimeout(() => {
+    refresh.click();
+  }, 1500);
+});
+
+refresh.addEventListener('click', () => {
+  util.displayLeaderboard();
+});
+
+window.addEventListener('load', () => {
+  util.displayLeaderboard();
+});
