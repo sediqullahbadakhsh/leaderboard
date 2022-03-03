@@ -9,18 +9,19 @@
     <h1>Leaderboard</h1>
     <div class="leader-container">
       <section class="recent-scores">
-        <h2>Recent scores</h2>
-        <button class="refresh" type="button">Refresh</button>
-
-        <div class="list-scores" id="scores"></div>
+        <div class="list-header">
+          <h2>Recent scores</h2>
+          <button class="btn" id="refresh" type="button">Refresh</button>
+        </div>
+        <ul class="scores"></ul>
       </section>
       <section class="add-score">
         <h2>Add your score</h2>
-        <div class="form">
+        <form>
           <input
             type="text"
             name="Name"
-            class="name"
+            class="inpute-box"
             id="name"
             placeholder="Your name"
             required
@@ -28,13 +29,14 @@
           <input
             type="text"
             name="Score"
-            class="score"
+            class="inpute-box"
             id="score"
             placeholder="Your score"
             required
           />
-          <input class="submit" id="submit" type="submit" value="Submit" />
-        </div>
+          <input class="btn" id="submit" type="submit" value="Submit" />
+          <p></p>
+        </form>
       </section>
     </div>
   </body>
